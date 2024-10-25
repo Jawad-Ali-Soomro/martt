@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { useEffect, useState } from "react";
 import "../_styles/header.scss";
-import { BiHeart, BiShoppingBag, BiUser } from "react-icons/bi";
+import { BiShoppingBag, BiUser } from "react-icons/bi";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -46,9 +46,6 @@ const Header = () => {
       <div className="navs flex">
         <div className="icons flex">
           <div className="icon flex">
-            <BiHeart />
-          </div>
-          <div className="icon flex">
             <BiShoppingBag />
           </div>
           <div
@@ -73,6 +70,11 @@ const Header = () => {
                     : "Profile"}
                 </li>
                 <li
+                  style={{
+                    background: `${
+                      userInfo?.notifications?.inApp === true ? "#eee" : ""
+                    }`,
+                  }}
                   data-content="NEW"
                   className={
                     userInfo?.notifications?.inApp === true ? "new" : ""
@@ -136,7 +138,9 @@ const Header = () => {
         className="menu flex col"
         style={{
           maxHeight: `${showMenu ? "80vh" : "0"}`,
-          border: `${showMenu ? "1px solid" : "0"}`,
+          border: `${
+            showMenu ? "1px solid rgba(0,0,0,.2)" : "1px solid transparent"
+          }`,
         }}
       >
         <div className="top-menu flex">

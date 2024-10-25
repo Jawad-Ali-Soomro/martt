@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat";
+  border-radius: 20px;
+}
+
+*::selection {
+  user-select: none;
 }
 
 .flex {
