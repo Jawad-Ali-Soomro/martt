@@ -11,8 +11,7 @@ import "../_styles/home.scss";
 const Welcome = () => {
   return (
     <div className="flex home-container col">
-      <h1>Welcome To</h1>
-      <h2>MARTT.</h2>
+      <div className="hero-sect flex col"></div>
       <Latest productLength={12} />
       <div className="newsletter flex col">
         <h3>Join OUr Newsletter</h3>
