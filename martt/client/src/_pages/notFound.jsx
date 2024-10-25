@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useNavigate } from "react-router-dom";
 import "../_styles/not-found.scss";
 

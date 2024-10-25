@@ -11,7 +11,6 @@ const Latest = ({ productLength }) => {
   const [menuOpt, setOpt] = useState(false);
   const [data, setData] = useState([]);
 
-  // Shuffle the data array
   const shuffleArray = (array) => {
     let shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -23,12 +22,9 @@ const Latest = ({ productLength }) => {
     }
     return shuffledArray;
   };
-
-  // Fetch products from API and shuffle them
   const requestApi = async () => {
     try {
       const res = await axios.get(`${productApi}/all`);
-      // Shuffle the products after fetching and set the data
       const shuffledProducts = shuffleArray(
         res.data.foundProducts.splice(0, productLength)
       );
@@ -40,7 +36,7 @@ const Latest = ({ productLength }) => {
 
   useEffect(() => {
     requestApi();
-  }, [productLength]); // Fetch products when the component mounts or productLength changes
+  }, [productLength]);
 
   return (
     <div className="arrivals-container flex col">

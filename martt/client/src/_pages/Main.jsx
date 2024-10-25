@@ -8,17 +8,15 @@ import { productApi } from "../_constants/api-urls";
 
 const Main = () => {
   const [size, setSize] = useState();
-  const { id } = useParams(); // Get the id from route parameters
+  const { id } = useParams();
   const [data, setData] = useState({});
-  const [selectedImage, selectImage] = useState(); // State for selected image
-
-  // Fetch product data by ID
+  const [selectedImage, selectImage] = useState();
   const fetchResponse = async () => {
     try {
       const res = await axios.get(`${productApi}/${id}`);
       if (res?.data?.foundProduct) {
-        setData(res.data.foundProduct); // Set the fetched product data
-        selectImage(res.data.foundProduct.image[0]); // Select the first image
+        setData(res.data.foundProduct);
+        selectImage(res.data.foundProduct.image[0]);
       }
     } catch (error) {
       console.error("Error fetching product:", error);
@@ -26,7 +24,7 @@ const Main = () => {
   };
 
   useEffect(() => {
-    fetchResponse(); // Fetch product data when the component mounts or when id changes
+    fetchResponse();
   }, [id]);
 
   return (
@@ -54,7 +52,7 @@ const Main = () => {
         <div className="left-images flex">
           <div className="main-image flex">
             <img
-              src={selectedImage ? selectedImage : data?.image?.[0]} // Display selected image or first image
+              src={selectedImage ? selectedImage : data?.image?.[0]}
               alt=""
             />
           </div>
@@ -66,7 +64,7 @@ const Main = () => {
                     className={image === selectedImage ? "active" : ""}
                     src={image}
                     alt=""
-                    onClick={() => selectImage(image)} // Set selected image on click
+                    onClick={() => selectImage(image)}
                   />
                 </div>
               );

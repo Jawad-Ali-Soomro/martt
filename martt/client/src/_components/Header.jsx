@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { useEffect, useState } from "react";
 import "../_styles/header.scss";
 import { BiHeart, BiShoppingBag, BiUser } from "react-icons/bi";
@@ -203,7 +204,7 @@ const Header = () => {
             <li>knitwear</li>
             <li>sweetshirts // joggers</li>
             <li>jewelleries</li>
-            <li>bags</li>
+            <li>innerwears </li>
             <li>shoes</li>
             <li>makeup // kits</li>
             <li>basics</li>
