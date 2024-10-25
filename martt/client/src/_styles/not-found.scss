@@ -1,0 +1,22 @@
+.not-found {
+  height: 100vh !important;
+  text-transform: uppercase;
+  gap: 10px;
+  h2 {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  p {
+    max-width: 330px;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  .btn-back {
+    width: 270px;
+    height: 40px;
+    border: 1px solid;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

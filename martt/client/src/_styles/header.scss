@@ -1,0 +1,159 @@
+.header-container {
+  width: calc(100% - 100px);
+  background: white;
+  margin-left: 50px;
+  padding: 20px 0;
+  justify-content: space-between !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 0 !important;
+  z-index: 10000;
+  .logo {
+    img {
+      cursor: pointer;
+      width: 150px;
+    }
+  }
+  .navs {
+    gap: 10px;
+
+    .icons {
+      gap: 10px;
+      .icon {
+        width: 40px;
+        height: 40px;
+        color: #333;
+        border: 1px solid;
+        cursor: pointer;
+        position: relative;
+        .user-options {
+          width: 150px;
+          padding: 20px;
+          position: absolute;
+          border: 1px solid;
+          top: calc(100% + 10px);
+          right: 0;
+          padding: 10px;
+          background: white !important;
+          color: #333 !important;
+          gap: 5px;
+          li {
+            width: 90%;
+            border: 1px solid;
+            padding: 10px;
+            cursor: pointer;
+            list-style: none;
+            text-align: center;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+          .new {
+            position: relative;
+          }
+          .new::after {
+            content: attr(data-content);
+            position: absolute;
+            font-size: 0.5rem;
+            background: #333;
+            color: white;
+            padding: 2px 5px;
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+    .menu-bars {
+      z-index: 10000;
+      width: 40px;
+      height: 40px;
+      gap: 5px;
+      border: 1px solid;
+      cursor: pointer;
+      .bar {
+        transition: 0.3s;
+        width: 20px;
+        height: 1.8px;
+        background: #333;
+        border-radius: 5px;
+      }
+    }
+  }
+  .menu {
+    position: absolute;
+    width: 400px;
+    height: 70vh;
+    right: 0px;
+    top: 23.5px;
+    align-items: start;
+    background: white;
+    justify-content: start;
+    overflow: hidden;
+    .top-menu {
+      width: 400px;
+      margin-left: 25px;
+      padding: 20px;
+      margin-top: 20px;
+      align-items: start;
+      justify-content: start;
+      overflow: hidden;
+      ul {
+        display: flex;
+        gap: 30px;
+        li {
+          list-style: none;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+      }
+    }
+    .categories {
+      width: auto;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      transition: 0.3s;
+      justify-content: start;
+      align-items: start;
+      padding-left: 35px;
+      z-index: 1000000;
+
+      ul {
+        li,
+        p {
+          margin-top: 20px;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          font-weight: 400;
+          list-style: none;
+        }
+      }
+      .btns {
+        margin-top: 20px;
+        gap: 10px;
+        button {
+          padding: 10px 20px;
+          border: 1px solid;
+          text-transform: uppercase;
+          font-size: 0.5rem;
+          background: transparent;
+          cursor: pointer;
+        }
+      }
+    }
+    .main {
+      ul {
+        li,
+        p {
+          z-index: 1000000000;
+          cursor: pointer !important;
+        }
+      }
+    }
+  }
+}

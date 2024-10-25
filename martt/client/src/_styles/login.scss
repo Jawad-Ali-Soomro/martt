@@ -1,0 +1,81 @@
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  background: rgba($color: #000000, $alpha: 0.4);
+  .main-form {
+    gap: 10px;
+    padding: 20px;
+    background: white;
+    text-transform: uppercase;
+    h1 {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+    .input-wrap {
+      margin-top: 10px;
+      gap: 5px;
+      align-items: start;
+      position: relative;
+      label {
+        font-size: 0.6rem;
+        font-weight: 600;
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        background: white;
+        padding: 0 10px;
+      }
+      input {
+        width: 300px;
+        height: 35px;
+        padding-left: 10px;
+        outline: none;
+      }
+    }
+    .btn-login {
+      width: 100%;
+      height: 40px;
+      background: #333;
+      color: white;
+      border: none !important;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    .text {
+      align-self: flex-end;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: rgba($color: #000000, $alpha: 0.6);
+      cursor: pointer;
+    }
+    .text:hover {
+      color: black;
+    }
+    .btn-reg {
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      color: #333;
+      border: 1px solid;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .btn-reg:hover {
+      background: transparent !important;
+      color: #333 !important;
+    }
+  }
+  .modal-main {
+    height: 100vh;
+    width: 100%;
+    background: rgba($color: #000000, $alpha: 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+  }
+}
