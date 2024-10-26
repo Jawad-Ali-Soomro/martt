@@ -35,7 +35,7 @@
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: start;
     .desktop {
       width: calc(49.2%);
       border: 1px solid rgba($color: #000000, $alpha: 0.2);
@@ -45,8 +45,8 @@
     }
     .mobile {
       cursor: pointer;
-      width: 320px;
-      height: 400px;
+      width: calc(100% / 4 - 10px);
+      max-height: 500px;
       background: #eee !important;
       border: 1px solid rgba($color: #000000, $alpha: 0.2);
       overflow: hidden;
