@@ -36,9 +36,8 @@ const productSchema = new mongoose.Schema({
   },
   shop: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Shop",
-    required: true, // If a product must belong to a shop
-  },
+    ref: "Shop"
+  }
 });
 
 const Product = mongoose.model("Product", productSchema);

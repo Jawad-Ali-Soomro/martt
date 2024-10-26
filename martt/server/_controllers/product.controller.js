@@ -10,11 +10,7 @@ const createProduct = async (req, res) => {
       });
     } else {
       const findShop = await Shop.findById(shopId);
-      if (!findShop) {
-        return res.status(201).json({
-          msg: "Shop not found!",
-        });
-      } else {
+      if(findShop) {
         findShop.products.push(newProduct._id);
         await findShop.save();
       }

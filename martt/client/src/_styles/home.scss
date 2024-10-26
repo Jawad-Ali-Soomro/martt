@@ -1,6 +1,7 @@
 .home-container {
   align-items: start !important;
   padding-left: 50px;
+  width: calc(100% - 102px);
   justify-content: start;
   text-transform: uppercase;
   .hero-sect {
@@ -13,7 +14,7 @@
       padding-bottom: 0px;
     }
     .bottom {
-      width: calc(100vw - 100px);
+      width: calc(100vw - 120px);
       padding-bottom: 50px;
       align-items: start;
       border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
